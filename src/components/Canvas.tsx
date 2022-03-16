@@ -76,9 +76,9 @@ function Canvas(props: CanvasProps) {
 
   const onClick = React.useCallback(
     (e: React.MouseEvent<HTMLCanvasElement>) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const evt = e.nativeEvent as any;
-      if (props.onClick) props.onClick(evt.layerX, evt.layerY);
+      const bounds = e.currentTarget.getBoundingClientRect();
+      const [x, y] = [e.clientX - bounds.left, e.clientY - bounds.top];
+      if (props.onClick) props.onClick(x, y);
     },
     [props.onClick]
   );

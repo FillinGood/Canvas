@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './components/App';
+import { ReduxApp } from './components/App';
 import { store } from './redux/store';
 import './styles/index.less';
 
@@ -13,7 +13,7 @@ document.onreadystatechange = () => {
 
   ReactDOM.render(
     <Provider store={store}>
-      <App />
+      <ReduxApp />
     </Provider>,
     document.getElementById('App')
   );

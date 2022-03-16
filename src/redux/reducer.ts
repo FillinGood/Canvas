@@ -3,6 +3,7 @@ import { ADDSHAPE, AnyAction, SETCOLOR, SETFILL, SETSHAPE, SETSIZE } from "./act
 import { defaultState, StoreState } from "./store";
 
 export function reducer(state: StoreState | undefined, action: AnyAction): StoreState {
+  console.log(action);
     if (!state) return defaultState;
     switch (action.type) {
       case ADDSHAPE:

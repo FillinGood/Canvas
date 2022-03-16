@@ -84,7 +84,7 @@ function Canvas(props: CanvasProps) {
   );
 
   return (
-    //оборот в один элемент и добавление кнопонек
+    //оборот в один элемент
     <div>
       <canvas
         className={classNames('canvas', props.className)}
@@ -93,7 +93,6 @@ function Canvas(props: CanvasProps) {
         width={CANVAS_SIZE}
         height={CANVAS_SIZE}
       />
-      
     </div>
   );
 }
